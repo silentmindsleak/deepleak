@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="static-leak-mirror/0.3-mirror">
+<title>DEEPLEAK // зеркало #2 — отражение</title>
+<link rel="stylesheet" href="mirror.css">
+</head>
+<body>
+<div id="grain"></div>
+<div id="scan"></div>
+
+<header id="topbar">
+  <a class="ic" href="index.html" onclick="goTransition(event,'index.html','// разрыв связи — возврат на зеркало #1…')" title="вернуться на зеркало #1">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M15 18l-6-6 6-6"/></svg>
+    <span class="lbl">зеркало #1</span>
+  </a>
+  <div class="mid">зеркало&nbsp;//&nbsp;#2&nbsp;//&nbsp;отражение&nbsp;архива</div>
+  <a class="ic" href="desktop.html" onclick="goTransition(event,'desktop.html','// потеря сигнала — перенаправление на внутренний узел…')" title="внутренний узел">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2.5" y="3.5" width="19" height="13" rx="1.5"/><path d="M8 20.5h8M12 16.5v4"/></svg>
+    <span class="lbl">узел</span>
+  </a>
+</header>
+
+<section id="hero">
+  <!-- Тот же стиль что и в index.html (тишина), но зеркально отражён -->
+  <div class="glitch" data-text="SILENCE">SILENCE</div>
+  <div class="tagline">// у зеркала две стороны — собери отражение<span class="blink">_</span></div>
+  <div class="hint">
+    Это второе зеркало архива. Изображение, которое в нём отражалось, разбито на девять фрагментов, и каждый фрагмент вдобавок <b>повёрнут</b>. Целого кадра в архиве не сохранилось — только осколки.
+    <br><br>
+    Собери отражение: <b>перетаскивай</b> фрагменты мышью, чтобы менять их местами, и <b>кликай</b> по фрагменту, чтобы повернуть его на 90° по часовой стрелке.
+    Когда осколки встанут на свои места, зеркало проявит <b>QR-код</b> — отсканируй его, чтобы получить флаг.
+  </div>
+</section>
+
+<div id="stage">
+  <div id="board"></div>
+  <div id="status"></div>
+</div>
+
+<div id="win">
+  <canvas width="432" height="432"></canvas>
+  <div class="cap">отражение восстановлено. сигнал синхронизирован.</div>
+  <div class="fire-msg">/// SYNCHRONIZED /// SIGNAL RESTORED ///</div>
+  <div class="qr">На собранном кадре — QR. Отсканируй его камерой телефона, чтобы перейти к фрагменту кодовой фразы, затем возвращайся в архив.</div>
+</div>
+
+<div id="back">
+  <a href="index.html" onclick="goTransition(event,'index.html','// разрыв связи — возврат на зеркало #1…')">← вернуться на зеркало #1</a>
+  <span>mirror://#2 // qr-фрагмент внутри отражения</span>
+</div>
+
+<div id="fx" aria-hidden="true" class="in">
+  <div class="noise"></div>
+  <div class="scan"></div>
+  <div class="vhs"></div>
+  <div class="tear t1"></div>
+  <div class="tear t2"></div>
+  <div class="tear t3"></div>
+  <div class="txt">// синхронизация с зеркалом #2 — восстановление сигнала…</div>
+</div>
+
+<script src="mirror/data.js"></script>
+<script src="mirror.js"></script>
+</body>
+</html>

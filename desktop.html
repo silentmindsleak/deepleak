@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DEEPLEAK // internal-leak.node</title>
+<link rel="stylesheet" href="desktop.css">
+</head>
+<body>
+
+<div id="desktop">
+  <div id="grid"></div>
+  <div class="watermark" id="wm"></div>
+
+  <div id="topbar">
+    <div class="left">
+      <span class="brand">SM//LEAK</span>
+      <span class="menu" onclick="openNode('about')">об утечке</span>
+      <span class="menu" onclick="openNode('terminal')">терминал</span>
+    </div>
+    <div class="ticker">⚠ НЕАВТОРИЗОВАННАЯ СЕССИЯ — ВХОД НЕ ВЫПОЛНЕН — НЕ РАСПРОСТРАНЯТЬ</div>
+    <div class="right"><span id="clock">00:00:00</span><span class="cur">█</span></div>
+  </div>
+
+  <div id="icons"></div>
+
+  <div id="scanlines"></div>
+  <div id="vignette"></div>
+
+  <div id="dock"></div>
+
+  <div id="ctx">
+    <div class="ci" onclick="__ctx.refresh()">Обновить<span class="k">⌘R</span></div>
+    <div class="ci" onclick="openNode('terminal')">Открыть терминал<span class="k">⌘T</span></div>
+    <div class="csep"></div>
+    <div class="ci" onclick="openNode('about')">Об этой утечке…</div>
+    <div class="ci" onclick="__ctx.arrange()">Упорядочить ярлыки</div>
+  </div>
+
+  <!-- boot-последовательность -->
+  <div id="boot">
+    <div class="lines"></div>
+    <div class="skip">[ клик / enter — пропустить ]</div>
+  </div>
+</div>
+
+<script src="secrets.js"></script>
+<script src="gate.js"></script>
+<script src="fs.js"></script>
+<script src="desktop.js"></script>
+</body>
+</html>
